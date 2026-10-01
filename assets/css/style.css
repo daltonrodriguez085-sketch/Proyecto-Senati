@@ -39,5 +39,5 @@ header{
 
 /* ==== MENU HAMBURGUESA ==== */
 .right-hamburguesa{
-  
+  cursor: none; /* Desactivamos el cursor */
 }
