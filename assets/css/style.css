@@ -31,3 +31,13 @@ header{
     display: block; /* Eliminar espacios entre los lados*/
     object-fit: contain; /* Ajusta la imagen, sin recortarse a los lados */
 }
+
+.left-img{
+  display: flex;
+  align-items: center;
+}
+
+/* ==== MENU HAMBURGUESA ==== */
+.right-hamburguesa{
+  
+}
