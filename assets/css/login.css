@@ -276,3 +276,171 @@ header {
     font-size: 15px;
   }
 }
+
+/* ===================================================
+   TABLET (diseño base: 834px de ancho)
+   =================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Contenedor general: 834px centrado */
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+  }
+
+  .page {                      /* envuelve header + contenido */
+    width: 834px;
+    max-width: 100%;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    height: 88px;
+    padding: 0 24px;
+    background-color: #d9d9d9;
+    border-bottom: none;
+  }
+
+  .left-img {
+    gap: 20px;
+  }
+
+  .img-logo {
+    height: 52px;
+  }
+
+  .right-hamburguesa {
+    width: 40px;
+    height: 28px;
+  }
+
+  .right-hamburguesa span {
+    height: 4px;
+  }
+
+  .right-hamburguesa.activo span:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+  }
+
+  .right-hamburguesa.activo span:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+
+  /* ---------- Contenedor en dos columnas ---------- */
+  .login-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* imagen | formulario */
+    align-items: stretch;
+    min-height: calc(100vh - 88px);
+    padding: 0;
+    gap: 0;
+  }
+
+  /* Columna de la imagen (tú pones la imagen) */
+  .login-image {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ---------- Panel del formulario ---------- */
+  .login-card {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    background-color: #4a4070;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 60px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Título en caja gris */
+  .login-title {
+    background-color: #d9d9d9;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 14px 20px;
+    margin-bottom: 28px;
+    border-radius: 0;
+  }
+
+  /* ---------- Formulario ---------- */
+  .login-form {
+    width: 100%;
+  }
+
+  /* Filas de 2 columnas (Nombre/Apellido, Cédula/Teléfono) */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-row .form-group {
+    margin-bottom: 0;
+  }
+
+  .form-group label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  /* Inputs tipo píldora */
+  .form-group input {
+    height: 36px;
+    font-size: 16px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: #ffffff;
+  }
+
+  .form-group input::placeholder {
+    font-size: 14px;
+  }
+
+  .form-group input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+  }
+
+  /* Botón */
+  .form-actions {
+    margin-top: 24px;
+  }
+
+  .btn-submit {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 12px 40px;
+  }
+
+  .btn-submit:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
